@@ -4,7 +4,7 @@ Author: HCQ
 Company(School): UCAS
 Email: 1756260160@qq.com
 Date: 2021-09-12 11:16:43
-LastEditTime: 2021-09-13 11:14:38
+LastEditTime: 2022-08-30 17:56:33
 FilePath: /mmdetection3d/configs/_base_/models/hv_pointpillars_secfpn_kitti.py
 '''
 voxel_size = [0.16, 0.16, 4] # 长宽高
@@ -40,7 +40,7 @@ model = dict(
         upsample_strides=[1, 2, 4],
         out_channels=[128, 128, 128]),
     bbox_head=dict(
-        type='Anchor3DHead',
+        type='Anchor3DHead', # mmdet3d/models/dense_heads/anchor3d_head.py
         num_classes=3,
         in_channels=384,
         feat_channels=384,
